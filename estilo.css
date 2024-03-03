@@ -48,3 +48,34 @@ main{
     margin: 10px 0 0;
     color: #495057;
 }
+.boton{
+    width: 47.5%;
+    margin: 10px 0 10px 0;
+    padding: 24px;
+    border-radius: 24px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    transition: 0.4s all;
+    
+}
+.boton:hover{
+    padding: 25px;
+}
+#encriptar{
+    float: left;
+    background: #0A3871;
+    color: #D8DFE8;
+}
+#encriptar:hover{
+    background: #D8DFE8;
+    color: #0A3871;
+}
+.boton:last-child{
+    float: right;
+    background: #D8DFE8;
+    color: #0A3871;
+}
+.boton:last-child:hover{
+    background: #0A3871;
+    color: #D8DFE8;
+}
