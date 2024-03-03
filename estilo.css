@@ -11,4 +11,10 @@ header{
     vertical-align: top;
     box-sizing: border-box;
 }
-
+main{
+    width: 84%;
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    box-sizing: border-box;
+}
