@@ -27,3 +27,24 @@ main{
     box-sizing: border-box;
     vertical-align: top;
 }
+.entrada-texto textarea{
+    display: block;
+    font-size: 20px;
+    color: rgb(23, 35, 99);
+    width: 100%;
+    height: 80%;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+}
+.entrada-texto:active{
+    border: none;
+}
+.entrada-texto textarea::placeholder{
+    color: #0A3871;
+}
+.entrada-texto p{
+    font-size: 15px;
+    margin: 10px 0 0;
+    color: #495057;
+}
