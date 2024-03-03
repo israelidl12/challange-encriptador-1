@@ -3,3 +3,12 @@ body{
     height: 100vh;
     background: #F3F5FC;
 }
+header{
+    width: 14%;
+    height: 100vh;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
