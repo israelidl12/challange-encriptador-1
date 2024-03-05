@@ -7,6 +7,7 @@ const matriz_code= [
 ];
 
 function textoAEncriptar(){
-    let textoaencriptar = document.getElementById("textEntrada");
+    let textoaencriptar = document.getElementById("textEntrada").value;
+    console.log(textoaencriptar);
     return textoaencriptar;
 }

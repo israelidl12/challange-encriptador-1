@@ -15,9 +15,9 @@
     </header>
     <main>
         <section class="entrada-texto">
-            <textarea id="textEntrada" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea cols="30" rows="10" placeholder="Ingrese el texto aquí" id="textEntrada"></textarea>
             <p>Solo letras minusculas</p>
-            <button class="boton" id="encriptar">Encriptar</button>
+            <button onclick="textoAEncriptar();" class="boton" id="encriptar">Encriptar</button>
             <button class="boton">Desencriptar</button>
         </section>
         <section class="salida-texto">
@@ -28,5 +28,6 @@
             </div>
         </section>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
