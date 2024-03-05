@@ -10,6 +10,7 @@ let textoaencriptar;
 
 function encriptar(textoaencriptar){
     textoaencriptar=document.getElementById("textEntrada").value;
+    textoaencriptar=textoaencriptar.toLowerCase();
     for(let i=0; i<matriz_code.length;i++){
         if(textoaencriptar.includes(matriz_code[i][0])){
             textoaencriptar=textoaencriptar.replaceAll(
