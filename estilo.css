@@ -140,3 +140,46 @@ main{
         margin: 20px 10px;
     }
 }
+@media screen and (max-width: 770px){
+    header{
+        display: block;
+        height: auto;
+        display: block;
+    }
+    main{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .entrada-texto{
+        display: block;
+        height: auto;
+        width: 100%;
+        padding: 30px;
+    }
+    .salida-texto{
+        margin-top: 30px;
+        display: block;
+        height: auto;
+        width: 100%;
+        
+        
+    }
+    .mensaje-salida{
+
+        top: 0;
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        height: auto;
+    }
+    .mensaje-salida p{
+        width: auto;
+        position: static;
+        margin: 10px;
+        
+    }
+    .mensaje-salida img{
+        display: none;
+    }
+}
