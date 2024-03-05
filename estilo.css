@@ -94,3 +94,33 @@ main{
     box-shadow: 0 16px 20px 0.0002px #F0FFE9;
 
 }
+.mensaje-salida{
+    width: 80%;
+    height: 10%;
+    margin: 10px 15px 10px 20px;
+    position: absolute;
+    top: 20%;
+    bottom: calc(65% + 5px);
+    
+}
+.mensaje-salida img{
+    width: 93%;
+    height: 400%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 20px 10px;
+}
+.mensaje-salida p{
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+.mensaje-salida p{
+    font-weight: bold;
+    
+}
+.mensaje-salida p:last-child{
+    font-weight:normal;
+    font-size: 14px;
+}
