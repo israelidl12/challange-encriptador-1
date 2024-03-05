@@ -5,3 +5,8 @@ const matriz_code= [
     ["o","ober"],
     ["u","ufat"]
 ];
+
+function textoAEncriptar(){
+    let textoaencriptar = document.getElementById("textEntrada");
+    return textoaencriptar;
+}
