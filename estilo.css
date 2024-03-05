@@ -131,3 +131,12 @@ main{
     font-weight:normal;
     font-size: 14px;
 }
+@media screen and (max-width: 1100px){
+    .mensaje-salida img{
+        margin: 10px 0;
+    }
+    .mensaje-salida p{
+        width: 80%;
+        margin: 20px 10px;
+    }
+}
