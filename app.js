@@ -5,12 +5,15 @@ const matriz_code= [
     ["o","ober"],
     ["u","ufat"]
 ];
-let textoaencriptar;
+function asignartexto(){
+   let textoEntrada=document.getElementById("textEntrada").value;
+    textoEntrada=textoEntrada.toLowerCase();
+    return textoEntrada;
+}
 
-function encriptar(textoaencriptar){
-    textoaencriptar=document.getElementById("textEntrada").value;
-    textoaencriptar=textoaencriptar.toLowerCase();
-    if(typeof textoaencriptar === "string" && textoaencriptar !==""){
+function encriptar(){
+    let textoaencriptar = asignartexto();
+    if(typeof textoaencriptar === "string" && textoaencriptar !== ""){
         for(let i=0; i<matriz_code.length;i++){
             if(textoaencriptar.includes(matriz_code[i][0])){
                 textoaencriptar=textoaencriptar.replaceAll(
