@@ -7,17 +7,26 @@ const matriz_code= [
 ];
 let textoaencriptar;
 
-
 function encriptar(textoaencriptar){
     textoaencriptar=document.getElementById("textEntrada").value;
     textoaencriptar=textoaencriptar.toLowerCase();
-    for(let i=0; i<matriz_code.length;i++){
-        if(textoaencriptar.includes(matriz_code[i][0])){
-            textoaencriptar=textoaencriptar.replaceAll(
-                matriz_code[i][0],
-                matriz_code[i][1]
-            );
+    if(typeof textoaencriptar === "string" && textoaencriptar !==""){
+        for(let i=0; i<matriz_code.length;i++){
+            if(textoaencriptar.includes(matriz_code[i][0])){
+                textoaencriptar=textoaencriptar.replaceAll(
+                    matriz_code[i][0],
+                    matriz_code[i][1]
+                );
+            }
         }
+        textosalida(textoaencriptar);
     }
-    console.log(textoaencriptar);
+}
+
+function textosalida(texto){
+    let mensajesalida = document.querySelector(".salida-texto");
+    mensajesalida.innerHTML =`
+    <p id="texto-salida">${texto}</p>
+    <button>Copiar</button>`;
+    return;
 }
