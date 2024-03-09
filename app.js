@@ -10,39 +10,52 @@ function asignartexto(){
     textoEntrada=textoEntrada.toLowerCase();
     return textoEntrada;
 }
-
-function encriptar(){
+function btnencriptar(){
     let textoaencriptar = asignartexto();
-    if(typeof textoaencriptar === "string" && textoaencriptar !== ""){
+    if (typeof textoaencriptar === "string" && textoaencriptar !==""){
+        textoaencriptar=encriptar(textoaencriptar);
+        textosalida(textoaencriptar);
+    }
+    else{
+        condicionesIniciales();
+    }
+    return;
+}
+function btndesencriptar(){
+    let textoadesencriptar =asignartexto();
+    if (typeof textoadesencriptar === "string" && textoadesencriptar !== ""){
+        textoadesencriptar =desencriptar(textoadesencriptar);
+        textosalida(textoadesencriptar);
+    }
+    else{
+        condicionesIniciales();
+    }
+    return;
+}
+function encriptar(mensaje){
         for(let i=0; i<matriz_code.length;i++){
-            if(textoaencriptar.includes(matriz_code[i][0])){
-                textoaencriptar=textoaencriptar.replaceAll(
+            if(mensaje.includes(matriz_code[i][0])){
+                mensaje=mensaje.replaceAll(
                     matriz_code[i][0],
                     matriz_code[i][1]
                 );
             }
         }
-        textosalida(textoaencriptar);
+        return mensaje;
     }
-    return;
-}
 
-function desencriptar(){
-    let textoadesencriptar = asignartexto();
-    if(typeof textoadesencriptar === "string" && textoadesencriptar !== ""){
+function desencriptar(mensaje){
         for(let i=0;i<matriz_code.length;i++){
-            if(textoadesencriptar.includes(matriz_code[i][1])){
-                textoadesencriptar=textoadesencriptar.replaceAll(
+            if(mensaje.includes(matriz_code[i][1])){
+                mensaje=mensaje.replaceAll(
                     matriz_code[i][1],
                     matriz_code[i][0]
                 )
             }
         }
-        textosalida(textoadesencriptar);
-    }
-    return;
-}
+        return mensaje;
 
+    }
 function textosalida(texto){
     let mensajesalida = document.querySelector(".salida-texto");
     mensajesalida.innerHTML =`
@@ -50,3 +63,14 @@ function textosalida(texto){
     <button>Copiar</button>`;
     return;
 }
+
+function condicionesIniciales(){
+    let mensajeinicial = document.querySelector(".salida-texto");
+    mensajeinicial.innerHTML = `
+    <div class="mensaje-salida">
+        <img src="Imagenes/Muñeco.png">
+        <p>Ningún mensaje fue encontrado</p>
+        <p>Ingresa el texto que desees encriptar o desencriptar</p>
+    </div>`
+}
+condicionesIniciales();
