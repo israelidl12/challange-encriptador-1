@@ -30,7 +30,7 @@ function encriptar(){
 function desencriptar(){
     let textoadesencriptar = asignartexto();
     if(typeof textoadesencriptar === "string" && textoadesencriptar !== ""){
-        for(let i=0;i>matriz_code.length;i++){
+        for(let i=0;i<matriz_code.length;i++){
             if(textoadesencriptar.includes(matriz_code[i][1])){
                 textoadesencriptar=textoadesencriptar.replaceAll(
                     matriz_code[i][1],
