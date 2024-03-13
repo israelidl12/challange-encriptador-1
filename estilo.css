@@ -106,21 +106,27 @@ main{
     color: #0A3871;
     text-align: left;
 }
-.salida-texto button{
+#btncopiar{
     width: 90%;
     margin: 10px 0 10px 0;
     padding: 24px;
     border-radius: 24px;
     background: #D8DFE8;
+    color: #0A3871;
     border: 1px solid #0A3871;
     transition: 0.4s all;
     position: absolute;
     top: 85%;
 }
-.salida-texto button:hover{
+#btncopiar:hover{
     padding: 25px;
     color: #D8DFE8;
     background: #0A3871;
+}
+#btncopiar.no-hover:hover{
+    padding: 24px;
+    background: #D8DFE8;
+    color: #0A3871;
 }
 .mensaje-salida{
     width: 80%;

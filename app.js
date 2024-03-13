@@ -32,6 +32,16 @@ function btndesencriptar(){
     }
     return;
 }
+function btncopiar(){
+    let textocopiado =document.getElementById("texto-salida");
+    let button=document.getElementById("btncopiar");
+    navigator.clipboard.writeText(textocopiado.textContent);
+    button.setAttribute('disabled','true');
+    button.textContent="Copiado";
+    button.classList.add("no-hover");
+    return;
+}
+
 function encriptar(mensaje){
         for(let i=0; i<matriz_code.length;i++){
             if(mensaje.includes(matriz_code[i][0])){
@@ -62,7 +72,7 @@ function textosalida(texto){
     let mensajesalida = document.querySelector(".salida-texto");
     mensajesalida.innerHTML =`
     <p id="texto-salida">${texto}</p>
-    <button>Copiar</button>`;
+    <button onclick="btncopiar();" id="btncopiar">Copiar</button>`;
     return;
 }
 
