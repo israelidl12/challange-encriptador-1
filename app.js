@@ -45,17 +45,19 @@ function encriptar(mensaje){
     }
 
 function desencriptar(mensaje){
-        for(let i=0;i<matriz_code.length;i++){
-            if(mensaje.includes(matriz_code[i][1])){
-                mensaje=mensaje.replaceAll(
-                    matriz_code[i][1],
-                    matriz_code[i][0]
-                )
+    const regex = new RegExp(matriz_code.map(([_, encriptado]) => encriptado).join('|'), 'g');
+    mensaje = mensaje.replace(regex, 
+        match => {
+        for (const [original, encriptado] of matriz_code) {
+            if (match === encriptado) {
+                return original;
             }
         }
-        return mensaje;
-
+        return match;
+    });
+    return mensaje;
     }
+
 function textosalida(texto){
     let mensajesalida = document.querySelector(".salida-texto");
     mensajesalida.innerHTML =`
