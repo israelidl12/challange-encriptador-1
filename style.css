@@ -205,7 +205,7 @@ main{
         padding: 0 0 100px 0;
         position: absolute;
         top: 80%;
-        left: 4%;
+        left: 2.2%;
     }
     .mensaje-inicial{
         top: 5%;
@@ -231,12 +231,16 @@ main{
     }
 }
 @media screen and (max-width: 360px){
+    .entrada-texto{
+        padding-bottom: 50px;
+    }
     .boton{
         width: 100%;
         display: block;
     }
     .salida-texto{
-        padding: 100px 10px 70px;   
+        padding: 100px 10px 70px;
+        top: 90%;  
     }
     .mensaje-inicial{
         left: 4%;
