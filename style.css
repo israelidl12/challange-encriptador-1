@@ -104,10 +104,16 @@ main{
     box-shadow: 0 16px 20px 0.0002px #F0FFE9;
 
 }
+.mensaje-salida{
+    padding: 100px;
+}
 #texto-salida{
     font-size: 13px;
     color: #0A3871;
     text-align: left;
+    position: absolute;
+    bottom: 95%;
+    left: 4%;
 }
 #btncopiar{
     width: 90%;
@@ -120,6 +126,7 @@ main{
     transition: 0.4s all;
     position: absolute;
     top: 85%;
+    left: 4%;
 }
 #btncopiar:hover{
     padding: 25px;
@@ -131,7 +138,7 @@ main{
     background: #D8DFE8;
     color: #0A3871;
 }
-.mensaje-salida{
+.mensaje-inicial{
     width: 80%;
     height: 10%;
     margin: 10px 15px 10px 20px;
@@ -140,34 +147,37 @@ main{
     bottom: calc(65% + 5px);
     
 }
-.mensaje-salida img{
+.mensaje-inicial img{
     width: 93%;
     height: 400%;
     box-sizing: border-box;
     padding: 0;
     margin: 20px 10px;
 }
-.mensaje-salida p{
+.mensaje-inicial p{
     width: 100%;
     text-align: center;
     box-sizing: border-box;
     margin: 20px 0;
 }
-.mensaje-salida p{
+.mensaje-inicial p{
     font-weight: bold;
     
 }
-.mensaje-salida p:last-child{
+.mensaje-inicial p:last-child{
     font-weight:normal;
     font-size: 14px;
 }
 @media screen and (max-width: 1100px){
-    .mensaje-salida img{
+    .mensaje-inicial img{
         margin: 10px 0;
     }
-    .mensaje-salida p{
+    .mensaje-inicial p{
         width: 80%;
         margin: 20px 10px;
+    }
+    #btncopiar{
+        right: 4%;
     }
 }
 @media screen and (max-width: 770px){
@@ -191,31 +201,44 @@ main{
         margin-top: 30px;
         display: block;
         height: auto;
-        width: 100%;
-        
-        
+        width: 90%;
+        padding: 0 0 100px 0;
+        position: absolute;
+        top: 80%;
+        left: 4%;
     }
-    .mensaje-salida{
-
-        top: 0;
-        left: 10%;
+    .mensaje-inicial{
+        top: 5%;
+        left: 6%;
         right: 10%;
         bottom: 0;
         height: auto;
     }
-    .mensaje-salida p{
+    .mensaje-inicial p{
         width: auto;
         position: static;
         margin: 10px;
         
     }
-    .mensaje-salida img{
+    .mensaje-inicial img{
         display: none;
+    }
+    #btncopiar{
+        top: 55%;
+    }
+    #texto-salida{
+        bottom: 87%;
     }
 }
 @media screen and (max-width: 360px){
     .boton{
         width: 100%;
         display: block;
+    }
+    .salida-texto{
+        padding: 100px 10px 70px;   
+    }
+    .mensaje-inicial{
+        left: 4%;
     }
 }

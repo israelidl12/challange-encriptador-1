@@ -114,8 +114,10 @@ function desencriptar(mensaje){
 function textosalida(texto){
     let mensajesalida = document.querySelector(".salida-texto");
     mensajesalida.innerHTML =`
-    <p id="texto-salida">${texto}</p>
-    <button onclick="btncopiar();" id="btncopiar">Copiar</button>`;
+    <div class="mensaje-salida">
+        <p id="texto-salida">${texto}</p>
+        <button onclick="btncopiar();" id="btncopiar">Copiar</button>
+    </div>`;
     return;
 }
 
@@ -123,7 +125,7 @@ function textosalida(texto){
 function condicionesIniciales(){
     let mensajeinicial = document.querySelector(".salida-texto");
     mensajeinicial.innerHTML = `
-    <div class="mensaje-salida">
+    <div class="mensaje-inicial">
         <img src="Imagenes/Muñeco.png">
         <p>Ningún mensaje fue encontrado</p>
         <p>Ingresa el texto que desees encriptar o desencriptar</p>
